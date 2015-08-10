@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   describe 'Validations' do
+    subject(:group) { Group.new }
+
     specify 'require a name' do
-      group = Group.new
       group.name = nil
 
       group.valid?
@@ -12,7 +13,6 @@ RSpec.describe Group, type: :model do
     end
 
     specify 'require a city' do
-      group = Group.new
       group.city = nil
 
       group.valid?
@@ -21,7 +21,6 @@ RSpec.describe Group, type: :model do
     end
 
     specify 'require a state' do
-      group = Group.new
       group.state = nil
 
       group.valid?
