@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :season do
-    year 1
+    year 2015
   end
-
 end
